@@ -13,3 +13,5 @@ az account set --subscription $subscriptionID
 $location = "your preferred location"
 
 az deployment sub create --location $location --template-file "azskmain.bicep" --parameters "azskmain.parameters.json" --confirm-with-what-if
+
+az ad sp create-for-rbac --name azlzskapp --role contributor --scopes /subscriptions/aa706b48-8bf2-42f9-9889-864334147ec3 --sdk-auth
